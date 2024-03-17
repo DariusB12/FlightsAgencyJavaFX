@@ -1,5 +1,6 @@
 package repository.interfaces;
 
+import exception.ValidationException;
 import model.Entity;
 
 import java.util.Optional;
@@ -18,7 +19,7 @@ public interface ICrudRepository<ID,T extends Entity<ID>>{
      *     entity if it was not valid
      * }
      */
-    public abstract Optional<T> save(T entity);
+    public abstract Optional<T> save(T entity) throws ValidationException;
 
     /***
      * @return Iterable with all the entities in DB
