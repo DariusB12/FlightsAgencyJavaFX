@@ -1,4 +1,4 @@
-package repository;
+package repository.interfaces;
 
 import model.Entity;
 
@@ -9,7 +9,7 @@ import java.util.Optional;
  * @param <ID> the id type of entity
  * @param <T> the entity to be operated with
  */
-public interface IRepository<ID,T extends Entity<ID>>{
+public interface ICrudRepository<ID,T extends Entity<ID>>{
     /***
      * Save the entity if is valid
      * @param entity t

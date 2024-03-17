@@ -9,7 +9,7 @@ public class FlightRepairRequestTest {
     @Test
     @DisplayName("Flight test random!")
     public void testExample(){
-        Flight crr = new Flight(null,null,null,null);
+        Flight crr = new Flight(null,null,null,null,null);
         assertNull(crr.getAirport());
         assertNull(crr.getDestination());
     }
