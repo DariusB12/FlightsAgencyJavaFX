@@ -6,12 +6,12 @@
         </Console>
         <File name="log" fileName="src/main/java/logger.txt" append="true">
             <PatternLayout pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n"/>
-        </File>c
+        </File>
     </Appenders>
     <Loggers>
         <Root level="trace">
             <AppenderRef ref="log"/>
-<!--            <AppenderRef ref="Console"/>-->
+            <!--            <AppenderRef ref="Console"/>-->
         </Root>
     </Loggers>
 </Configuration>

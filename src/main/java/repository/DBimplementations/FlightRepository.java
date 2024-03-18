@@ -26,11 +26,13 @@ public class FlightRepository implements IFlightRepository{
     private static final Logger logger = LogManager.getLogger();
 
     public FlightRepository(Properties properties) {
+        logger.info("Initializing FlightRepository with properties: {} ",properties);
         this.jdbcUtils = new JdbcUtils(properties);
     }
 
     @Override
     public Iterable<Flight> findByDestinationAndDate(String destination, LocalDate departureDate) {
+
         logger.info("Getting the connection for filterByDestinationAndDate {} {}",destination,departureDate);
         Connection con = jdbcUtils.getConnection();
         try(

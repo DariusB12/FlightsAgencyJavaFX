@@ -21,6 +21,7 @@ public class TicketRepository implements ITicketRepository {
     private static final Logger logger = LogManager.getLogger();
 
     public TicketRepository(Properties properties) {
+        logger.info("Initializing TicketRepository with properties: {} ",properties);
         this.jdbcUtils = new JdbcUtils(properties);
     }
 

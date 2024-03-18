@@ -1,5 +1,6 @@
 package repository.interfaces;
 
+import exception.ValidationException;
 import model.User;
 
 import java.util.Optional;
