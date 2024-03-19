@@ -51,8 +51,8 @@ public class TicketRepository implements ITicketRepository {
             resultSet.next();
             int noSeatsFlight = resultSet.getInt("no_seats");
             if(noSeatsFlight >= entity.getNoSeats()) {
-                System.out.println(noSeatsFlight);
-                System.out.println(entity.getNoSeats());
+//                System.out.println(noSeatsFlight);
+//                System.out.println(entity.getNoSeats());
                 preparedStatement1.setString(1, entity.getNameClient());
                 preparedStatement1.setString(2, entity.getAddressClient());
                 preparedStatement1.setInt(3, entity.getNoSeats());
