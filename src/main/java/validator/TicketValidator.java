@@ -20,7 +20,7 @@ public class TicketValidator implements IValidator<Ticket>{
         if(entity.getFlight().getSeatsNo() < entity.getNoSeats()){
             errors += "can't buy more tickets than available in the flight\n";
         }
-        if(errors !=""){
+        if(errors != ""){
             throw new ValidationException(errors);
         }
     }

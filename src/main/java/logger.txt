@@ -856,3 +856,207 @@
 17 Mar 2024 22:52:14,577 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7f2cfe3f)
 17 Mar 2024 22:52:14,578 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7f2cfe3f)
 17 Mar 2024 22:52:14,578 TRACE repository.DBimplementations.TicketRepository 76 save - Exit with(Too much tickets bought)
+19 Mar 2024 12:12:06,051 INFO  repository.DBimplementations.FlightRepository 29 <init> - Initializing FlightRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+19 Mar 2024 12:12:06,058 INFO  repository.DBimplementations.FlightRepository 69 findAllAvailable - Getting the connection for findAllAvailable
+19 Mar 2024 12:12:06,059 TRACE repository.JdbcUtils 49 getConnection - Enter
+19 Mar 2024 12:12:06,059 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+19 Mar 2024 12:12:06,059 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+19 Mar 2024 12:12:06,060 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+19 Mar 2024 12:12:06,060 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+19 Mar 2024 12:12:06,326 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e16c0aa)
+19 Mar 2024 12:12:06,327 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e16c0aa)
+19 Mar 2024 12:12:06,351 TRACE repository.DBimplementations.FlightRepository 90 findAllAvailable - Exit with([Flight{destination='Craiova', departureDate=2025-05-17, departureTime=13:33, airport='Craiova Airport', seatsNo=2}, Flight{destination='Franta', departureDate=2026-06-17, departureTime=12:35, airport='Franta Airport', seatsNo=1}])
+19 Mar 2024 12:12:06,357 INFO  repository.DBimplementations.TicketRepository 24 <init> - Initializing TicketRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+19 Mar 2024 12:12:06,358 TRACE repository.DBimplementations.TicketRepository 34 save - saving the ticket model.Ticket{nameClient='darius', nameTourists=[elena, gheorghe, badea], addressClient='Baia Mare', noSeats=4, flight=Flight{destination='fdgfdg', departureDate=null, departureTime=null, airport='null', seatsNo=6}}
+19 Mar 2024 12:12:06,359 TRACE repository.JdbcUtils 49 getConnection - Enter
+19 Mar 2024 12:12:06,360 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+19 Mar 2024 12:12:06,361 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+19 Mar 2024 12:12:06,361 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+19 Mar 2024 12:12:06,361 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+19 Mar 2024 12:12:06,363 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a5b6f42)
+19 Mar 2024 12:12:06,363 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a5b6f42)
+19 Mar 2024 12:12:06,364 TRACE repository.DBimplementations.TicketRepository 77 save - Exit with(Too much tickets bought)
+19 Mar 2024 12:20:34,849 INFO  repository.DBimplementations.FlightRepository 29 <init> - Initializing FlightRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+19 Mar 2024 12:20:34,857 INFO  repository.DBimplementations.FlightRepository 69 findAllAvailable - Getting the connection for findAllAvailable
+19 Mar 2024 12:20:34,858 TRACE repository.JdbcUtils 49 getConnection - Enter
+19 Mar 2024 12:20:34,858 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+19 Mar 2024 12:20:34,858 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+19 Mar 2024 12:20:34,859 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+19 Mar 2024 12:20:34,860 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+19 Mar 2024 12:20:35,263 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e16c0aa)
+19 Mar 2024 12:20:35,264 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e16c0aa)
+19 Mar 2024 12:20:35,293 TRACE repository.DBimplementations.FlightRepository 90 findAllAvailable - Exit with([Flight{destination='Bucuresti', departureDate=2025-05-17, departureTime=12:00:12, airport='Bucuresti Airport', seatsNo=10}, Flight{destination='Craiova', departureDate=2025-05-17, departureTime=13:33, airport='Craiova Airport', seatsNo=2}, Flight{destination='Franta', departureDate=2026-06-17, departureTime=12:35, airport='Franta Airport', seatsNo=1}])
+19 Mar 2024 12:20:35,298 INFO  repository.DBimplementations.TicketRepository 24 <init> - Initializing TicketRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+19 Mar 2024 12:20:35,300 TRACE repository.DBimplementations.TicketRepository 34 save - saving the ticket model.Ticket{nameClient='darius', nameTourists=[elena, gheorghe, badea], addressClient='Baia Mare', noSeats=4, flight=Flight{destination='fdgfdg', departureDate=null, departureTime=null, airport='null', seatsNo=6}}
+19 Mar 2024 12:20:35,300 TRACE repository.JdbcUtils 49 getConnection - Enter
+19 Mar 2024 12:20:35,301 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+19 Mar 2024 12:20:35,301 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+19 Mar 2024 12:20:35,302 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+19 Mar 2024 12:20:35,302 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+19 Mar 2024 12:20:35,303 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a5b6f42)
+19 Mar 2024 12:20:35,303 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a5b6f42)
+19 Mar 2024 12:20:35,334 TRACE repository.DBimplementations.TicketRepository 74 save - Exit with(Tickets bought successfully)
+25 Mar 2024 10:15:15,218 INFO  repository.DBimplementations.FlightRepository 29 <init> - Initializing FlightRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:15:15,218 INFO  repository.DBimplementations.FlightRepository 69 findAllAvailable - Getting the connection for findAllAvailable
+25 Mar 2024 10:15:15,218 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:15:15,218 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:15:15,218 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:15:15,218 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:15:15,218 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:15:15,501 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e16c0aa)
+25 Mar 2024 10:15:15,501 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e16c0aa)
+25 Mar 2024 10:15:15,532 TRACE repository.DBimplementations.FlightRepository 90 findAllAvailable - Exit with([Flight{destination='Bucuresti', departureDate=2025-05-17, departureTime=12:00:12, airport='Bucuresti Airport', seatsNo=6}, Flight{destination='Craiova', departureDate=2025-05-17, departureTime=13:33, airport='Craiova Airport', seatsNo=2}, Flight{destination='Franta', departureDate=2026-06-17, departureTime=12:35, airport='Franta Airport', seatsNo=1}])
+25 Mar 2024 10:15:15,532 INFO  repository.DBimplementations.TicketRepository 24 <init> - Initializing TicketRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:15:15,532 TRACE repository.DBimplementations.TicketRepository 34 save - saving the ticket model.Ticket{nameClient='darius', nameTourists=[elena, gheorghe, badea], addressClient='Baia Mare', noSeats=4, flight=Flight{destination='fdgfdg', departureDate=null, departureTime=null, airport='null', seatsNo=6}}
+25 Mar 2024 10:15:15,532 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:15:15,532 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:15:15,532 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:15:15,532 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:15:15,532 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:15:15,532 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a5b6f42)
+25 Mar 2024 10:15:15,532 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1a5b6f42)
+25 Mar 2024 10:15:15,548 TRACE repository.DBimplementations.TicketRepository 74 save - Exit with(Tickets bought successfully)
+25 Mar 2024 10:55:11,085 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:55:11,088 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:55:11,099 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:55:11,099 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:55:11,100 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:55:11,317 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:55:11,317 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:55:11,319 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:55:11,319 TRACE repository.DBimplementations.UserRepository 67 findByUsername - Enter finding user with username mihnea 
+25 Mar 2024 10:55:11,320 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:55:11,320 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:55:11,320 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:55:11,320 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:55:11,320 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:55:11,321 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7dc3712)
+25 Mar 2024 10:55:11,321 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7dc3712)
+25 Mar 2024 10:55:11,333 TRACE repository.DBimplementations.UserRepository 83 findByUsername - Exit User found: user:mihnea
+25 Mar 2024 10:55:23,825 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:55:23,828 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:55:23,837 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:55:23,837 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:55:23,837 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:55:24,039 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:55:24,040 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:55:24,044 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:55:24,046 TRACE repository.DBimplementations.UserRepository 67 findByUsername - Enter finding user with username mihneas 
+25 Mar 2024 10:55:24,046 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:55:24,046 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:55:24,047 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:55:24,047 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:55:24,047 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:55:24,050 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7dc3712)
+25 Mar 2024 10:55:24,050 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7dc3712)
+25 Mar 2024 10:55:24,061 TRACE repository.DBimplementations.UserRepository 90 findByUsername - Exit No user found with username: mihneas
+25 Mar 2024 10:56:37,151 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:56:37,155 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:56:37,166 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:56:37,166 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:56:37,167 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:56:37,372 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:56:37,372 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:56:37,374 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:56:37,375 TRACE repository.DBimplementations.UserRepository 96 save - Enter saving the user user:mihnea
+25 Mar 2024 10:56:37,376 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:56:37,376 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:56:37,376 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:56:37,376 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:56:37,376 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:56:37,377 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5e3f861)
+25 Mar 2024 10:56:37,377 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5e3f861)
+25 Mar 2024 10:56:37,377 TRACE repository.DBimplementations.UserRepository 67 findByUsername - Enter finding user with username mihnea 
+25 Mar 2024 10:56:37,378 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:56:37,378 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5e3f861)
+25 Mar 2024 10:56:37,385 TRACE repository.DBimplementations.UserRepository 83 findByUsername - Exit User found: user:mihnea
+25 Mar 2024 10:56:37,386 TRACE repository.DBimplementations.UserRepository 101 save - Exit Not unique username: user:mihnea
+25 Mar 2024 10:56:54,286 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:56:54,289 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:56:54,299 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:56:54,299 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:56:54,300 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:56:54,510 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:56:54,511 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:56:54,513 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:56:54,514 TRACE repository.DBimplementations.UserRepository 96 save - Enter saving the user user:mihneas
+25 Mar 2024 10:56:54,515 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:56:54,515 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:56:54,515 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:56:54,516 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:56:54,517 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:56:54,519 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5e3f861)
+25 Mar 2024 10:56:54,520 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5e3f861)
+25 Mar 2024 10:56:54,520 TRACE repository.DBimplementations.UserRepository 67 findByUsername - Enter finding user with username mihneas 
+25 Mar 2024 10:56:54,521 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:56:54,521 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5e3f861)
+25 Mar 2024 10:56:54,535 TRACE repository.DBimplementations.UserRepository 90 findByUsername - Exit No user found with username: mihneas
+25 Mar 2024 10:56:54,552 TRACE repository.DBimplementations.UserRepository 116 save - Exit User saved with succes: user:mihneas
+25 Mar 2024 10:57:28,768 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:57:28,771 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:57:28,781 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:57:28,781 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:57:28,782 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:57:28,968 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:57:28,969 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:57:28,973 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:57:28,975 TRACE repository.DBimplementations.UserRepository 36 findByUsernameAndPassword - Enter finding user by username and password
+25 Mar 2024 10:57:28,975 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:57:28,976 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:57:28,976 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:57:28,976 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:57:28,977 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:57:28,978 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:57:28,979 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:57:28,992 TRACE repository.DBimplementations.UserRepository 61 findByUsernameAndPassword - Exit No user found with username and password: mihneas 1234
+25 Mar 2024 10:58:07,607 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:58:07,609 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:58:07,619 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:58:07,619 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:58:07,620 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:58:07,864 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:58:07,865 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:58:07,867 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:58:07,873 TRACE repository.DBimplementations.UserRepository 36 findByUsernameAndPassword - Enter finding user by username and password
+25 Mar 2024 10:58:07,873 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:58:07,873 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:58:07,874 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:58:07,874 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:58:07,874 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:58:07,876 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:58:07,876 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:58:07,906 TRACE repository.DBimplementations.UserRepository 54 findByUsernameAndPassword - Exit with(user:mihneas)
+25 Mar 2024 10:58:19,370 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:58:19,373 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:58:19,382 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:58:19,383 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:58:19,383 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:58:19,586 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:58:19,587 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:58:19,589 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:58:19,592 TRACE repository.DBimplementations.UserRepository 36 findByUsernameAndPassword - Enter finding user by username and password
+25 Mar 2024 10:58:19,592 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:58:19,592 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:58:19,592 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:58:19,592 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:58:19,593 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:58:19,594 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:58:19,595 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:58:19,611 TRACE repository.DBimplementations.UserRepository 61 findByUsernameAndPassword - Exit No user found with username and password: mihneas 123
+25 Mar 2024 10:58:24,480 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:58:24,483 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:58:24,491 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:58:24,492 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:58:24,492 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:58:24,704 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:58:24,705 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@29f7cefd)
+25 Mar 2024 10:58:24,706 INFO  repository.DBimplementations.UserRepository 29 <init> - Initializing UserRepository with properties: {jdbc.sqlite=jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db} 
+25 Mar 2024 10:58:24,708 TRACE repository.DBimplementations.UserRepository 36 findByUsernameAndPassword - Enter finding user by username and password
+25 Mar 2024 10:58:24,708 TRACE repository.JdbcUtils 49 getConnection - Enter
+25 Mar 2024 10:58:24,708 TRACE repository.JdbcUtils 23 getNewConnection - Enter
+25 Mar 2024 10:58:24,709 INFO  repository.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:/Users/DariusName/Desktop/UBB sem4/MPP/ProiectJava/sqliteDBFlights/flightsSQLite.db
+25 Mar 2024 10:58:24,709 INFO  repository.JdbcUtils 31 getNewConnection - user: null
+25 Mar 2024 10:58:24,709 INFO  repository.JdbcUtils 32 getNewConnection - pass: null
+25 Mar 2024 10:58:24,710 TRACE repository.JdbcUtils 44 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:58:24,710 TRACE repository.JdbcUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2fb0623e)
+25 Mar 2024 10:58:24,741 TRACE repository.DBimplementations.UserRepository 54 findByUsernameAndPassword - Exit with(user:mihneas)

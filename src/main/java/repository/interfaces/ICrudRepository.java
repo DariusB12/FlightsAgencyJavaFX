@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface ICrudRepository<ID,T extends Entity<ID>>{
     /***
      * Save the entity if is valid
-     * @param entity t
+     * @param entity T
      * @return {
      *     optional empty if it was saved
      *     entity if it was not valid
