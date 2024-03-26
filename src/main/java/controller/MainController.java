@@ -163,6 +163,11 @@ public class MainController implements Initializable {
             touristNamesList = separateTouristsNames(touristsNames);
         }
 
+        if(touristNamesList.size() != noOfSeats -1){
+            Message.showError("The number of seats doesn't correspond with the no of tourists");
+            return;
+        }
+
         Ticket ticket = new Ticket(clientName,touristNamesList,clientAddress,noOfSeats,selectedFlight);
         try{
             ticketService.buyTicket(ticket);
