@@ -47,8 +47,8 @@ public class FlightMain {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        JdbcUtils jdbcUtils = new JdbcUtils(properties);
-        Connection con = jdbcUtils.getConnection();
+//        JdbcUtils jdbcUtils = new JdbcUtils(properties);
+//        Connection con = jdbcUtils.getConnection();
         UserRepository userRepository = new UserRepository(properties);
         System.out.println(userRepository.findByUsernameAndPassword("mihneas","1234"));
         User user = new User("mihneas");

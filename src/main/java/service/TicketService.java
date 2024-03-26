@@ -14,13 +14,10 @@ public class TicketService {
         this.ticketRepository = ticketRepository;
     }
 
-    public Ticket buyTicket(Ticket ticket) throws ValidationException, ServiceException {
+    public void buyTicket(Ticket ticket) throws ValidationException, ServiceException {
         Optional<Ticket> obj = ticketRepository.save(ticket);
         if(obj.isPresent())
         {
-            return obj.get();
-        }
-        else{
             throw new ServiceException("Too much tickets bought\n");
         }
     }

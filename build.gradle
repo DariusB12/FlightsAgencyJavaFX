@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 group = 'org.example'
@@ -8,6 +9,10 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+javafx {
+    modules = [ 'javafx.controls' , 'javafx.fxml']
 }
 
 dependencies {
@@ -32,7 +37,7 @@ test {
 jar{
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest{
-        attributes('Main-Class':'FlightMain')
+        attributes('Main-Class':'FlightsFXMain')
     }
     from{
         configurations.runtimeClasspath.collect{it.isDirectory() ? it:zipTree(it)}
@@ -40,5 +45,5 @@ jar{
 }
 
 application{
-    mainClass = 'FlightMain'
+    mainClass = 'FlightsFXMain'
 }

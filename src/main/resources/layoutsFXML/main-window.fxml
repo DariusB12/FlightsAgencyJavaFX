@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TableView fx:id="tableViewAllFlights" layoutX="14.0" layoutY="68.0" prefHeight="247.0" prefWidth="495.0">
+        <columns>
+          <TableColumn fx:id="tableColumnAllDestination" prefWidth="86.66669082641602" text="Destination" />
+          <TableColumn fx:id="tableColumnAllDepartureDate" prefWidth="97.33331298828125" text="DepartureDate" />
+            <TableColumn fx:id="tableColumnAllDepartureTime" prefWidth="90.66673278808594" text="DepartureTime" />
+            <TableColumn fx:id="tableColumnAllAirport" prefWidth="121.99993896484375" text="Airport" />
+            <TableColumn fx:id="tableColumnAllSeatsAvailable" prefWidth="92.66665649414062" text="Seats Available" />
+        </columns>
+      </TableView>
+      <Label layoutX="240.0" layoutY="31.0" text="Flights" />
+      <TableView fx:id="tableViewSearchFlights" layoutX="518.0" layoutY="68.0" prefHeight="247.0" prefWidth="495.0">
+         <columns>
+            <TableColumn fx:id="tableColumnSearchDestination" prefWidth="86.66669082641602" text="Destination" />
+            <TableColumn fx:id="tableColumnSearchDepartureDate" prefWidth="97.33331298828125" text="DepartureDate" />
+            <TableColumn fx:id="tableColumnSearchDepartureTime" prefWidth="90.66673278808594" text="DepartureTime" />
+            <TableColumn fx:id="tableColumnSearchAirport" prefWidth="121.99993896484375" text="Airport" />
+            <TableColumn fx:id="tableColumnSearchSeatsAvailable" prefWidth="92.66665649414062" text="Seats Available" />
+         </columns>
+      </TableView>
+      <TextField fx:id="textFieldDestination" layoutX="518.0" layoutY="36.0" promptText="destination" />
+      <DatePicker fx:id="datePickerDepartureDate" layoutX="679.0" layoutY="36.0" promptText="departure date" />
+      <Button fx:id="buttonSearch" layoutX="927.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleButtonSearch" text="Search" />
+      <Label layoutX="565.0" layoutY="14.0" text="Destiantion" />
+      <Label layoutX="725.0" layoutY="14.0" text="Departure Date" />
+      <Label layoutX="228.0" layoutY="323.0" text="Buy Tickets" />
+      <TextField fx:id="textFieldClientName" layoutX="104.0" layoutY="352.0" prefHeight="25.0" prefWidth="341.0" />
+      <Label layoutX="14.0" layoutY="356.0" text="Client Name" />
+      <TextField fx:id="textFieldTouristsNames" layoutX="553.0" layoutY="352.0" prefHeight="25.0" prefWidth="462.0" promptText="introduce the names separated by comas" />
+      <Label layoutX="463.0" layoutY="356.0" text="Tourists Names" />
+      <Label layoutX="12.0" layoutY="390.0" text="Client Address" />
+      <TextField fx:id="textFieldClientAddress" layoutX="102.0" layoutY="386.0" prefHeight="25.0" prefWidth="341.0" />
+      <Label layoutX="463.0" layoutY="390.0" text="No of seats" />
+      <Spinner fx:id="spinnerNoOfSeats" layoutX="553.0" layoutY="386.0" prefHeight="25.0" prefWidth="61.0" />
+      <Button fx:id="buttonBuyTicket" layoutX="836.0" layoutY="386.0" mnemonicParsing="false" onAction="#handleButtonBuyTicket" text="BuyTicket" />
+   </children>
+</AnchorPane>
