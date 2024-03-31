@@ -98,7 +98,7 @@ public class UserRepository implements IUserRepository {
         userIValidator.validate(entity);
         Optional<User> obj = this.findByUsername(entity.getUsername());
         if (obj.isPresent()) {
-            logger.traceExit("Not unique username: {}", entity);
+            logger.traceExit("Username already taken: {}", entity);
             return Optional.of(entity);
         }
 

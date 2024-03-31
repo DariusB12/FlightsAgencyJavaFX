@@ -26,14 +26,13 @@ public class UserService {
         }
     }
 
-    public void signUp(User user) throws ValidationException, ServiceException {
+    public User signUp(User user) throws ValidationException, ServiceException {
         Optional<User> obj = userRepository.save(user);
         if(obj.isPresent()){
-            throw new ServiceException("Username not unique\n");
+            throw new ServiceException("Username already taken\n");
         }
+        Optional<User> objWIthID = userRepository.findByUsername(user.getUsername());
+        return objWIthID.get();
     }
 
-    public boolean isUsernameTaken(String username){
-        return userRepository.findByUsername(username).isPresent();
-    }
 }

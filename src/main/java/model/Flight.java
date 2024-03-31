@@ -76,12 +76,10 @@ public class Flight extends Entity<Integer>{
 
     @Override
     public String toString() {
-        return "Flight{" +
-                "destination='" + destination + '\'' +
-                ", departureDate=" + departureDate +
-                ", departureTime=" + departureTime +
-                ", airport='" + airport + '\'' +
-                ", seatsNo=" + seatsNo +
-                '}';
+        return "destination: " + destination +
+                ", departureDate: " + departureDate +
+                ", departureTime: " + departureTime +
+                ", airport: "  + airport +
+                ", seatsNo: " + seatsNo;
     }
 }

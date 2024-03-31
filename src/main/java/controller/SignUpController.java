@@ -2,8 +2,8 @@ package controller;
 
 import exception.Message;
 import exception.ServiceException;
+import exception.ValidationException;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -17,46 +17,47 @@ import service.UserService;
 import uitls.factory.Container;
 import uitls.factory.Factory;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SignInController implements Initializable {
-    private UserService userService;
+public class SignUpController implements Initializable {
     private Container container;
-
-    @FXML
+    private Stage stage;
+    private UserService userService;
     public TextField textFieldUsername;
-    @FXML
-    public Button buttonSignIn;
-    @FXML
+    public PasswordField textFieldPassword;
+    public PasswordField textFieldConfirmPassword;
     public Button buttonSignUp;
-    @FXML
-    public PasswordField passwordFieldPassword;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
 
-    public void setResources(Container container){
+    public void setResources(Container container, Stage stage){
+        this.stage = stage;
         this.container = container;
         this.userService = container.getUserService();
     }
 
-    public void handleSignIn(ActionEvent actionEvent) {
+    public void handleButtonSignUp(ActionEvent actionEvent) {
         String username = textFieldUsername.getText();
-        String password = passwordFieldPassword.getText();
+        String password = textFieldPassword.getText();
+        String confirmPassword= textFieldConfirmPassword.getText();
+
+        if(username == "" || username == null || password == null || password == "" || !password.equals(confirmPassword)){
+            Message.showError("Invalid username or password");
+            return;
+        }
+        User user = new User(username);
+        user.setPassword(password);
         try{
-            User user = userService.signIn(username,password);
-            createNewMainWindowDialog(user);
-        } catch (ServiceException e) {
+            User userCreated = userService.signUp(user);
+            createNewMainWindowDialog(userCreated);
+            this.stage.close();
+        } catch (Exception e) {
             Message.showError(e.getMessage());
-            passwordFieldPassword.clear();
-        }catch (Exception e){
-            Message.showError("Error at opening the user window\n" + e.getMessage());
         }
     }
-
     private void createNewMainWindowDialog(User user) throws Exception{
         Stage stage = new Stage();
         stage.setTitle("Flights Agency - User: " + user.getUsername());
@@ -74,20 +75,4 @@ public class SignInController implements Initializable {
         stage.show();
     }
 
-    public void handleSignUp(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
-        stage.setTitle("SignUp");
-
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/layoutsFXML/signup-window.fxml"));
-        AnchorPane myPane = (AnchorPane) loader.load();
-
-        //initialize the controller with the container that contains the services
-        SignUpController controller = loader.getController();
-        controller.setResources(Factory.getContainer(),stage);
-
-        Scene myScene = new Scene(myPane);
-        stage.setScene(myScene);
-
-        stage.show();
-    }
 }

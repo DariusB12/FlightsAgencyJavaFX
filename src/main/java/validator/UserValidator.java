@@ -3,14 +3,16 @@ package validator;
 import exception.ValidationException;
 import model.User;
 
+import java.util.Objects;
+
 public class UserValidator implements IValidator<User> {
     @Override
     public void validate(User entity) throws ValidationException {
         String errors = "";
-        if (entity.getUsername() == "") {
+        if (Objects.equals(entity.getUsername(), "")) {
             errors += "invalid username\n";
         }
-        if (entity.getPassword() == "") {
+        if (Objects.equals(entity.getPassword(), "")) {
             errors += "invalid password\n";
         }
         if (errors != "") {

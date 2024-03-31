@@ -11,19 +11,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Flight;
 import model.Ticket;
 import service.FlightService;
 import service.TicketService;
 import uitls.factory.Container;
+import uitls.observer.Observer;
 
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
 
-public class MainController implements Initializable {
+public class MainController implements Initializable, Observer {
     public TableColumn tableColumnSearchDestination;
     public TableColumn tableColumnSearchDepartureDate;
     public TableColumn tableColumnSearchDepartureTime;
@@ -34,9 +36,11 @@ public class MainController implements Initializable {
     public TextField textFieldClientAddress;
     public Button buttonBuyTicket;
     public Spinner spinnerNoOfSeats;
+    public TextField textFieldSelectedFlight;
 
     private Stage stage;
     private Container container;
+    private Flight selectedFlight = null;
     private FlightService flightService;
     private TicketService ticketService;
 
@@ -98,6 +102,7 @@ public class MainController implements Initializable {
         this.container = container;
         this.flightService = container.getFlightService();
         this.ticketService = container.getTicketService();
+        ticketService.registerObserver(this);
 
         spinnerNoOfSeats.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1,300,1));
 
@@ -142,8 +147,7 @@ public class MainController implements Initializable {
         Integer noOfSeats = (Integer) spinnerNoOfSeats.getValue();
         List<String> touristNamesList;
 
-        Flight selectedFlight = (Flight) tableViewSearchFlights.getSelectionModel().getSelectedItem();
-        if(selectedFlight == null){
+        if(this.selectedFlight == null){
             Message.showError("No flight selected");
             return;
         }
@@ -163,12 +167,8 @@ public class MainController implements Initializable {
             touristNamesList = separateTouristsNames(touristsNames);
         }
 
-        if(touristNamesList.size() != noOfSeats -1){
-            Message.showError("The number of seats doesn't correspond with the no of tourists");
-            return;
-        }
 
-        Ticket ticket = new Ticket(clientName,touristNamesList,clientAddress,noOfSeats,selectedFlight);
+        Ticket ticket = new Ticket(clientName,touristNamesList,clientAddress,noOfSeats,this.selectedFlight);
         try{
             ticketService.buyTicket(ticket);
             Message.showMessage("BuyTicket","Ticket Bought With Success");
@@ -190,5 +190,49 @@ public class MainController implements Initializable {
             touristsNameFormated.add(name);
         }
         return touristsNameFormated;
+    }
+
+    public void handleClickedSearchedTableView(MouseEvent mouseEvent) {
+        selectedFlight = (Flight) tableViewSearchFlights.getSelectionModel().getSelectedItem();
+        if(selectedFlight != null)
+            textFieldSelectedFlight.setText(selectedFlight.toString());
+        else
+            textFieldSelectedFlight.setText("");
+
+    }
+
+    public void handleClickedAllTableView(MouseEvent mouseEvent) {
+        selectedFlight = (Flight) tableViewAllFlights.getSelectionModel().getSelectedItem();
+        if(selectedFlight != null)
+            textFieldSelectedFlight.setText(selectedFlight.toString());
+        else
+            textFieldSelectedFlight.setText("");
+    }
+
+    @Override
+    public void update() {
+        initializeAllFlights();
+        updateSearchedFlights();
+    }
+
+    //update the search flights table view based on the updated data in the AllFlightsTableView
+    private void updateSearchedFlights() {
+        List<Flight> allFlights = (List<Flight>) tableViewAllFlights.getItems();
+        List<Flight> updatedSearchFlights = new ArrayList<>();
+
+        List<Flight> searchFlights = (List<Flight>) tableViewSearchFlights.getItems();
+        //get the id of the flights in the search tabe view
+        List<Integer> idSearchedFlights = new ArrayList<>();
+        searchFlights.forEach(flight -> {
+            idSearchedFlights.add(flight.getId());
+        });
+
+        //create a list with updated flights based on the TableViewAllFlights that is already updated
+        allFlights.forEach(flight -> {
+            if(idSearchedFlights.contains(flight.getId())){
+                updatedSearchFlights.add(flight);
+            }
+        });
+        dataSearchFlights.setAll(updatedSearchFlights);
     }
 }
